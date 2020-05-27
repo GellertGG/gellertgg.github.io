@@ -1,825 +1,217 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
-  <meta charset="utf-8">
-  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>
+        Hexo
+    </title>
+    
+<link rel="stylesheet" href="/libs/highlight/styles/monokai-sublime.css">
 
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
 <link rel="stylesheet" href="/css/style.css">
 
 <meta name="generator" content="Hexo 4.2.1"></head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+<body id="bodyx">
+    <div class="hd logodiv">
+    <img src="/img/logo.png" class="logopng">
+    <p class="logot"><span class="logo_1">&lt;</span><span class="logo_2">/</span><span class="logo_3">#</span> GEEK 三斤 <span class="logo_3">#</span><span class="logo_2">/</span><span class="logo_1">&gt;</span></p>
+</div>
+<div class="hd">
+    <ol class="breadcrumb">
         
-          <a class="main-nav-link" href="/">Home</a>
+            <li><a class="ba" href="/project">作品</a></li>
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+            <li><a class="ba" href="/domain">域名</a></li>
         
-      </nav>
-      <nav id="sub-nav">
+            <li><a class="ba" href="/links">友联</a></li>
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+            <li><a class="ba" href="/about">关于</a></li>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-mysql必知必会" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/04/mysql%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/" class="article-date">
-  <time datetime="2020-01-04T02:13:53.056Z" itemprop="datePublished">2020-01-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+            <li><a class="ba" href="https://github.com/sanjinhub" target="_blank" rel="noopener">Github</a></li>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/04/mysql%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/">mysql必知必会</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>schema：关于数据库和表的布局及特性的信息，一般来说和数据库同义</p>
-<p>选择数据库：USE crashcourse;</p>
-<p>展示数据库：SHOW DATABASES;</p>
-<p>展示数据库表：SHOW TABLES;</p>
-<p>显示列：SHOW COLUMNS FROM customers;（或者使用DESCRIBE custoers;）</p>
-<h4 id="其他show语句"><a href="#其他show语句" class="headerlink" title="其他show语句"></a>其他show语句</h4><ol>
-<li>SHOW STATUS:用于广泛的服务器状态信息</li>
-<li>SHOW CREATE DATABASE 和SHOW CREATE TABLE，分别用来显示创建特定数据库或者表的Mysql语句</li>
-<li>SHOW GRANTS:用来显示授权用户(所有用户或特定用户的安全权限)</li>
-<li>SHOW ERRORS和SHOW WARNINS:用来显示服务器错误或警告信息</li>
-<li>HELP SHOW展示所有SHOW命令</li>
-</ol>
-<h4 id="检索"><a href="#检索" class="headerlink" title="检索"></a>检索</h4><ol>
-<li>检索不同行：使用DISTINCT关键字，如：SELECT DISTINCT vender_id FROM products; DISTINCTf关键字用户所有列表示指定的所有列都不同</li>
-<li>限制结果：使用LIMIT关键字，如：SELECT prod_name FROM products LIMIT 5,5;（从第5行开始的5行）</li>
-<li>使用完全限定的表名：如：SELECT products.prod_name FROM crashcource.products;</li>
-<li>排序检索：<ol>
-<li>ORDER BY子句：SELECT prod_name FROM products ORDER BY prod_name;  按照多个列排序的时候，后面的列需要在前面的列值相同的情况下才进行排列</li>
-<li>使用DESC关键字进行降序排序，默认是升序(ASC)</li>
-</ol>
-</li>
-</ol>
-<h4 id="过滤数据"><a href="#过滤数据" class="headerlink" title="过滤数据"></a>过滤数据</h4><ol>
-<li>使用WHERE子句，同时使用WHERE和ORDER BY时，需要将ORDER BY位于WHERE之后</li>
-<li>范围值检查：SELECT * FROM products WHERE prod_price BETWEEN 5 AND 10;</li>
-<li>空值检查：SELECT * FROM products WHERE prod_price IS NULL;</li>
-</ol>
-<h4 id="数据过滤"><a href="#数据过滤" class="headerlink" title="数据过滤"></a>数据过滤</h4><ol>
-<li>AND、OR、IN、NOT</li>
-<li>LIKE关键字，通配符过滤：%（表示任何字符出现任意次数）；_ （表示只匹配单个字符而不是多个字符）</li>
-<li>正则表达式：用来匹配文本的特殊的字符串 SELECT * FROM A WHERE name REGEXP ”。000“ ；(和LIKE的不同在于，LIKE匹配整个列，而REGECXP匹配列值中的文本)</li>
-</ol>
-<h4 id="创建计算字段"><a href="#创建计算字段" class="headerlink" title="创建计算字段"></a>创建计算字段</h4><ol>
-<li>查询字段拼接： SELECT Concat(vendername,”(“. Vendercountry, “)”) FROM venders;</li>
-<li>RTrim()函数去掉右边的所有空格</li>
-<li>使用别名：SELECT Concat(vendername,”(“. Vendercountry, “)”) AS vender_title FROM venders;</li>
-</ol>
-<h4 id="使用数据处理函数"><a href="#使用数据处理函数" class="headerlink" title="使用数据处理函数"></a>使用数据处理函数</h4><ol>
-<li>文本处理函数：RTrim()去除列值右边的空格，Upper函数转成大写</li>
-<li>日期和时间处理函数：Now() ;Time();</li>
-<li>数值处理函数：Abs(); Tan();</li>
-</ol>
-<h4 id="汇总数据"><a href="#汇总数据" class="headerlink" title="汇总数据"></a>汇总数据</h4><ol>
-<li>使用场景<ol>
-<li>确定表中的行数（或者满足某个条件或包含某个特定值的行数）</li>
-<li>获得表中行组的和</li>
-<li>找出表列（或所有或某些特定的行）的最大值、最小值和平均值</li>
-</ol>
-</li>
-<li>常见的函数<ol>
-<li>AVG():返回某列的平均值</li>
-<li>COUNT():返回某列的行数</li>
-<li>MAX():返回某列的最大值</li>
-<li>MIN():返回某列的最小值</li>
-<li>SUM():返回某列值之和</li>
-</ol>
-</li>
-</ol>
-<h4 id="分组数据"><a href="#分组数据" class="headerlink" title="分组数据"></a>分组数据</h4><p>分组允许把数据分成多个逻辑组，以便能对每个组进行聚集计算</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/01/04/mysql%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/" data-id="ckaox2lai0000zsgfaipagxh5" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-vimStudy" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/12/30/vimStudy/" class="article-date">
-  <time datetime="2019-12-30T00:57:27.235Z" itemprop="datePublished">2019-12-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
+    </ol>
+    <hr class="breadcrumbhr">
+</div>
+<div class="hd">
     
     
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/30/vimStudy/">vimStudy</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="一、模式"><a href="#一、模式" class="headerlink" title="一、模式"></a>一、模式</h4>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/12/30/vimStudy/" data-id="ckaox2lan0001zsgfehnp8eh6" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-小强升职记" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/12/29/%E5%B0%8F%E5%BC%BA%E5%8D%87%E8%81%8C%E8%AE%B0/" class="article-date">
-  <time datetime="2019-12-29T03:51:59.921Z" itemprop="datePublished">2019-12-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/29/%E5%B0%8F%E5%BC%BA%E5%8D%87%E8%81%8C%E8%AE%B0/">小强升职记</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>时间黑洞</p>
-<p>产生原因：大脑喜欢做简单的事情，在做简单的事情的时候就会陷入时间黑洞了(比如刷微博)</p>
-<h4 id="一、四步工作法："><a href="#一、四步工作法：" class="headerlink" title="一、四步工作法："></a>一、四步工作法：</h4><ol>
-<li>将所有任务放入工作篮，不论什么时间和什么任务都放到工作篮</li>
-<li>将可以置之不理的任务清除，将必须在某天处理或者转交给别人处理的任务拿出来，将可以在两分钟内完成的任务立即完成</li>
-<li>将需要在特定日期处理的事情写入日程表，将需要别人处理的事情立即转交，将需要现在处理的事情摆在办公桌上</li>
-<li>在自己最高效的时段，做最重要的事情，其他的事情也做合理安排</li>
-</ol>
-<h4 id="二、个人价值观"><a href="#二、个人价值观" class="headerlink" title="二、个人价值观"></a>二、个人价值观</h4><ol>
-<li>成就感：不断创新，不断取得成就，不断得到领导和同事的赞扬，不断实现自己想要做的事</li>
-<li>社会地位：从事的工作在人们的心目中有较高的社会地位，使自己得到人的重视和尊敬</li>
-<li>经济报酬：获得优厚的报酬，使自己有足够的财力获得想要的东西，生活较为富足</li>
-<li>安全感：不管自己能力怎么样，希望在工作中有个安稳局面，不会因为奖金、涨工资、调动工作或领导训斥提心吊胆</li>
-<li>变异性：希望工作的内容应该经常变换，使工作和生活丰富多彩，不单调</li>
-</ol>
-<h4 id="三、四象限法则"><a href="#三、四象限法则" class="headerlink" title="三、四象限法则"></a>三、四象限法则</h4><p>评估一件事情的重要程度(根据职业价值观判断)和紧迫程度(任务的时间底线)</p>
-<ol>
-<li>重要紧急  （必须马上去做，否则会有非常严重的后果的）</li>
-<li>重要不紧急 （比如学习增长自身知识储备，是重要但不是紧急的，要时刻关注，避免转移到第一象限）</li>
-<li>不重要紧急 （对于紧急的事情需要先进行评估，看是否确实很重要）</li>
-<li>不重要不紧急 （基本都是些打发时间的事情）</li>
-</ol>
-<p><img src="../images/%E5%B0%8F%E5%BC%BA%E5%8D%87%E8%81%8C%E8%AE%B0/image-20191229122550094.png" alt="image-20191229122550094"></p>
-<p>各个象限处理方式：</p>
-<ol>
-<li>立即去做，避免进入这个象限的次数</li>
-<li>有计划去做，应该将时间投资到这一象限，可能事情很复杂，但是坚持一段时间后会有大收获</li>
-<li>交给别人去做</li>
-<li>尽量不要去做</li>
-</ol>
-<p>使用猴子法则走出第三象限</p>
-<p>书里面有个例子很形象：</p>
-<p><img src="../images/%E5%B0%8F%E5%BC%BA%E5%8D%87%E8%81%8C%E8%AE%B0/image-20191229123354678.png" alt="image-20191229123354678"></p>
-<p>猴子法则要点：</p>
-<ol>
-<li>明确职责，确定这只猴子不是你的 </li>
-<li>注意沟通方式，明确、坚决、不生硬</li>
-</ol>
-<p>当猴子甩不掉的时候，需要明确了解最终他们预期的结果，不要不明不白的接下来</p>
-<p>第二象限的工作法：</p>
-<p>需要对进行目标进行任务分解，明确下一步做什么；明确完成的标准；时刻把控进度</p>
-<p>时间管理三大杀手：信息不够、拖延、预期结果不明确</p>
-<p>GTD</p>
-<ol>
-<li>捕捉  清空大脑，将一切引起我们注意的东西放在收集篮里面(可以使用todo工具)</li>
-<li>明确意义  明确每件事的意义，分析哪件事情可以行动，哪件不可以行动</li>
-<li>组织思想  再重新整理存储</li>
-<li>深思  需要对整理后的清单修剪、产生灵感和提升高度</li>
-<li>行动</li>
-</ol>
-<p>时间管理：管理的是承诺，答应别人的和自己的</p>
-<p>克服拖延：</p>
-<ol>
-<li>臣服精力：人的精力是有限的，工作一段时间需要休息下储存精力(休息的时候可能会产生灵感，例如这次的火车上思考F5负载的问题就是一个灵感)</li>
-<li>臣服环境：工作中会经常被打断，这个不可避免，要想办法处理，比如加入工作篮，之后再处理</li>
-<li>臣服天性：再微不足道的成就也要大肆庆祝</li>
-</ol>
-<p>琐事越做越多，要事越做越少</p>
-<p>要事(重要但不紧急的事情)第一原则：做完必须要做的琐事，立刻回到要事上来</p>
-<p>对于临时突发的事情，没有其他方法，只能紧急应对，处理完之后，需要考虑下一步行动是什么</p>
-<p>首先我们养成习惯，然后习惯改变我们</p>
-<p>培养习惯：(少、慢，不要想着习惯养成一步到位，需要分解)</p>
-<ol>
-<li>再微不足道的成就都要大肆庆祝</li>
-<li>可以多人一起，微博话题等</li>
-</ol>
-<p>总结：</p>
-<p>处理事情前需要明确最终期望的结果</p>
-<p>将事情都放到todo里面，然后使用四象限法则分析</p>
-<p>避免收容猴子</p>
-<p>对于第二象限的事情要分解处理，每完成一个阶段进行庆祝奖励</p>
-<p>习惯养成：分解到细粒度最小的习惯，每隔一段时间达成后进行庆祝</p>
-<p>mysql必知必会：</p>
-<p>目的：熟练掌握数据库基本知识和高级知识</p>
-<p>分阶段：start-10、11-20、21-end</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/12/29/%E5%B0%8F%E5%BC%BA%E5%8D%87%E8%81%8C%E8%AE%B0/" data-id="ckaox2lau0006zsgfdj689u8h" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-图解http" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/12/16/%E5%9B%BE%E8%A7%A3http/" class="article-date">
-  <time datetime="2019-12-16T01:08:57.309Z" itemprop="datePublished">2019-12-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+            <div class="titlex">
+                <p><span class="jing">#</span>
+                    2020
+                </p>
+            </div>
+            
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/16/%E5%9B%BE%E8%A7%A3http/">图解http</a>
-    </h1>
-  
-
-      </header>
+        <a class="flink" href="/2020/01/04/mysql%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/">
+            <div class="list">
+                <div class="postname">
+                    mysql必知必会
+                </div>
+                <div class="posttime">
+                    January 4th
+                </div>
+            </div>
+        </a>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>协议</strong>：规则的约定</p>
-<p>http和RFC关系</p>
-<p>http和TCP/IP协议族    </p>
-<p>协议：计算机和网络设备想要通信所需要遵守的规则(如何探测到通信目标，由哪一边先发起通信，怎么结束通信等规则)</p>
-<p>协议分层模型</p>
-<p>http相关协议：IP、TCP、DNS</p>
-<p>TCP三次握手</p>
-<p>从输入url到接收到数据过程</p>
-<p>持久链接：减少tcp链接的重复建立和断开</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/12/16/%E5%9B%BE%E8%A7%A3http/" data-id="ckaox2las0004zsgfck7sae6a" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-金字塔原理" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/12/11/%E9%87%91%E5%AD%97%E5%A1%94%E5%8E%9F%E7%90%86/" class="article-date">
-  <time datetime="2019-12-11T02:10:07.099Z" itemprop="datePublished">2019-12-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/11/%E9%87%91%E5%AD%97%E5%A1%94%E5%8E%9F%E7%90%86/">金字塔原理</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>自上而下，归纳中心论点  </p>
-<p>纵向引导读者进行疑问-回答式对话(类似5why)</p>
-<p>横向确定逻辑关系支持上一层的思想</p>
-<p>每一层次的思想观点必须是下一层次思想观点的概括<br>每一组的思想观点必须在逻辑上属于同一范畴<br>每一组的思想观点必须符合逻辑顺序</p>
-<p>心理学家 乔治 米勒 人的大脑的短期记忆无法一次容纳约七个以上的项目。大脑容易记住的是3个项目，当然最容易记住的是一个项目，这就意味着当大脑出现需处理项目增加到4—5个时，就会开始将其归纳到不同的逻辑范畴中，以便于记忆”。</p>
-<p>目的：</p>
-<p>在沟通和思考的过程中，有时候会因为没有梳理好思维结构，不能让人立马能理解自己想表达的中心思想，造成无效的沟通，提高沟通的成本，读这本书的初衷就是希望可以帮助自己更加清晰的梳理表达和思考主题思想</p>
-<p>读完后的收获是</p>
-<p>习得一些写作的技巧以及组织思维的方法(横向使用演绎和归纳梳理各思想之间的关系和纵向引导疑问回答式对话)</p>
-<p>遗留问题：</p>
-<p>后面两篇介绍复杂问题的逻辑和演示的逻辑，不知道是翻译的问题还是思维确实存在差异，读起来有些费劲，没怎么理解，后面再多看几遍深入理解下</p>
-<p>感觉和之前我们用的5why法很像</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/12/11/%E9%87%91%E5%AD%97%E5%A1%94%E5%8E%9F%E7%90%86/" data-id="ckaox2lat0005zsgf512hd8zk" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-浏览器内存泄露" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/12/05/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E5%AD%98%E6%B3%84%E9%9C%B2/" class="article-date">
-  <time datetime="2019-12-05T03:14:26.205Z" itemprop="datePublished">2019-12-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/05/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E5%AD%98%E6%B3%84%E9%9C%B2/">浏览器内存泄露</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="chrome浏览器内存泄露"><a href="#chrome浏览器内存泄露" class="headerlink" title="chrome浏览器内存泄露"></a>chrome浏览器内存泄露</h5><h5 id="ie浏览器内存泄露"><a href="#ie浏览器内存泄露" class="headerlink" title="ie浏览器内存泄露"></a>ie浏览器内存泄露</h5><p><img src="../images/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E5%AD%98%E6%B3%84%E9%9C%B2/image-20191206100016464.png" alt="image-20191206100016464"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/12/05/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E5%AD%98%E6%B3%84%E9%9C%B2/" data-id="ckaox2lar0003zsgfb4zy77ws" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/12/03/hello-world/" class="article-date">
-  <time datetime="2019-12-03T13:07:03.958Z" itemprop="datePublished">2019-12-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+            <div class="titlex">
+                <p><span class="jing">#</span>
+                    2019
+                </p>
+            </div>
+            
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/03/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
+        <a class="flink" href="/2019/12/30/vimStudy/">
+            <div class="list">
+                <div class="postname">
+                    vimStudy
+                </div>
+                <div class="posttime">
+                    December 30th
+                </div>
+            </div>
+        </a>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/12/03/hello-world/" data-id="ckaox2laq0002zsgf5r2z302e" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-jvm字节码" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/19/jvm%E5%AD%97%E8%8A%82%E7%A0%81/" class="article-date">
-  <time datetime="2019-11-19T14:12:36.643Z" itemprop="datePublished">2019-11-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/19/jvm%E5%AD%97%E8%8A%82%E7%A0%81/">jvm字节码</a>
-    </h1>
-  
-
-      </header>
+        
+        <a class="flink" href="/2019/12/29/%E5%B0%8F%E5%BC%BA%E5%8D%87%E8%81%8C%E8%AE%B0/">
+            <div class="list">
+                <div class="postname">
+                    小强升职记
+                </div>
+                <div class="posttime">
+                    December 29th
+                </div>
+            </div>
+        </a>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>[toc]</p>
-<h4 id="class文件结构"><a href="#class文件结构" class="headerlink" title="class文件结构"></a>class文件结构</h4><p>一个类文件的结构基本如下图所示：</p>
-<img src="/Users/kerry/Desktop/jvm相关/classfile.png" alt="classfile" style="zoom:33%;" />
-
-<ol>
-<li>魔数<ul>
-<li>魔数就是CAFEBABE class文件的标志头</li>
-</ul>
-</li>
-<li>class文件主版本号和次版本号</li>
-<li>常量池计数器</li>
-<li>常量池<ul>
-<li>class文件的资源仓库</li>
-<li>字面量(文本字符串，声明为final的常量)</li>
-<li>符号引用(类和接口的全限定名，字段的名称和描述符、方法的名称和描述符)</li>
-<li>符号引用和直接引用的关系</li>
-<li>符号引用以一组符号来描述所引用的目标，符号可以是任何形式的字面量，只要使用时能够无歧义的定位到目标即可</li>
-<li>直接引用和虚拟机的布局是相关的，不同的虚拟机对于相同的符号引用所翻译出来的直接引用一般是不同的。如果有了直接引用，那么直接引用的目标一定被加载到了内存中。</li>
-</ul>
-</li>
-<li>访问标志<ul>
-<li>跟在常量池后面，用来标识一个类是是不是final、abstract、public、注解类、枚举类等</li>
-</ul>
-</li>
-<li>类索引、父类索引<ul>
-<li>用来确定类的继承关系</li>
-</ul>
-</li>
-<li>接口计数器和接口索引集合</li>
-<li>字段计数器和字段表集合<ul>
-<li>类中定义的字段会被存储到这个集合中，包括类中定义的静态和非静态的字段，不包括方法内部定义的变量。</li>
-<li>每个字段都有字段属性计数器和字段属性表集合<ul>
-<li>主要包括ConstantValue、Signature等</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>方法计数器和方法表集合<ul>
-<li>类中定义的方法会被存储在这里</li>
-<li>每个字段都有方法属性计数器和方法属性表集合<ul>
-<li>主要包括Code、Exceptions、MethodParameters、Signature、LineNumberTable等</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>class文件属性表计数器和class文件属性表集合<ul>
-<li>主要包括SourceFile、InnerClasses、EnclosingMethod等</li>
-</ul>
-</li>
-</ol>
-<h4 id="jvm字节码指令"><a href="#jvm字节码指令" class="headerlink" title="jvm字节码指令"></a>jvm字节码指令</h4><ol>
-<li><p>加载和存储指令</p>
-<p>用于将数据在栈帧中的局部变量表和操作数栈之间来回传输，主要有：</p>
-<ul>
-<li>将一个局部变量加载到操作数栈中：<code>iload、iload_&lt;n&gt;、lload、lload_&lt;n&gt;、fload、fload_&lt;n&gt;、dload、dload_&lt;n&gt;、aload、aload_&lt;n&gt;</code></li>
-<li>将一个数值从操作数栈存储到局部变量表：<code>istore、istore_&lt;n&gt;、lstore、lstore_&lt;n&gt;、fstore、fstore_&lt;n&gt;、dstore、dstore_&lt;n&gt;、astore、astore_&lt;n&gt;</code></li>
-<li>将一个常量加载到操作数栈：<code>bipush、sipush、ldc、ldc_w、aconst_null、iconst_m1、iconst_&lt;i&gt;、lconst_&lt;l&gt;、fconst_&lt;f&gt;、dconst_&lt;d&gt;</code></li>
-</ul>
-</li>
-<li><p>运算指令</p>
-<ul>
-<li>加法指令iadd、减法指令、乘法指令、除法指令、求余指令、取反指令、位移指令、按位或指令、按位与指令、按位异或指令、局部变量自增指令iinc、比较指令</li>
-</ul>
-</li>
-<li><p>类型转换指令（针对数值类型）</p>
-<ul>
-<li>窄化类型转换，如：i2b、i2c、i2s、l2i、f2i、f2l、d2i、d2f和d2l</li>
-</ul>
-</li>
-<li><p>对象创建和访问指令</p>
-<ul>
-<li>创建类实例指令：new</li>
-<li>创建数组指令：newarray、anewarray、multianewarray</li>
-<li>访问类字段和类变量：getfield、putfield、getstatic、putstatic</li>
-<li>将数组元素加载到操作数栈：baload、caload、saload、iadload、laload、faload、daload、aaload</li>
-<li>将一个操作数栈的值存储到数组元素中：bastore、castore、sastore、iastore、fastore、dastore、aastore</li>
-<li>取数组长度指令：arraylength</li>
-<li>检查类实例类型的指令：instanceof、checkcast</li>
-</ul>
-</li>
-<li><p>操作数栈管理指令(用于直接操作操作数栈)</p>
-<ul>
-<li>栈顶一个或者两个元素出栈：pop、pop2</li>
-<li>复制栈顶一个或两个数值并将复制值或双份的复制重新压入栈顶：dup、dup2、dup_x1、dup2_x1、dup_x2、dup2_x2</li>
-<li>将栈最顶端的两个数值互换：swap</li>
-</ul>
-</li>
-<li><p>控制转移指令(可以认为是直接修改PC寄存器的值，用来执行指定位置的指令)</p>
-<ul>
-<li>条件分支：ifeq、iflt、ifle、ifne、ifgt、ifge、ifnull、ifnonnull等</li>
-<li>复合条件分支：tableswitch、lookupswitch</li>
-<li>无条件分支：goto、goto_w、jsr、jsr_w、ret</li>
-</ul>
-</li>
-<li><p>方法调用和返回指令</p>
-<ul>
-<li>invokevirtual：调用实例方法，(public、protect等)根据实例的类型进行分派</li>
-<li>invokeinterface：调用接口方法，会在运行时搜索一个实现了这个接口方法的对象，找出适合的方法进行调用</li>
-<li>invokespecial：调用实例方法，专门用来调用父类方法、私有方法和实例初始化方法，也就是那些类加载时就能确定需要调用的具体方法，而不需要等到运行时去根据实际的对象值去调用该对象的方法</li>
-<li>invokestatic：调用类(静态)方法</li>
-<li>invokedynamic：调用动态方法，在运行时动态解析出调用点限定符所引用的方法，并执行该方法(没大理解)</li>
-</ul>
-</li>
-<li><p>异常处理指令</p>
-<ul>
-<li>java中显示抛出异常的操作都是由athrow指令完成</li>
-</ul>
-</li>
-<li><p>同步指令</p>
-<ul>
-<li>monitorenter指令</li>
-<li>monitorexit指令</li>
-</ul>
-</li>
-</ol>
-<h4 id="从字节码看栈的解释器执行过程"><a href="#从字节码看栈的解释器执行过程" class="headerlink" title="从字节码看栈的解释器执行过程"></a>从字节码看栈的解释器执行过程</h4><p>java方法源码如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testAdd</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">     <span class="keyword">int</span> c = a + b;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-
-<p>通过javap -c查看编译后的结果</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public void testAdd(int, int);</span><br><span class="line">  Code:</span><br><span class="line">     0: iload_1 &#x2F;&#x2F; 将局部变量1加载到操作数栈中</span><br><span class="line">     1: iload_2 &#x2F;&#x2F; 将局部变量2加载到操作数栈中</span><br><span class="line">     2: iadd &#x2F;&#x2F;将栈顶两个int型数值相加并将结果压入栈顶</span><br><span class="line">     3: istore_3 &#x2F;&#x2F;将栈顶int型数值存入到第四个本地变量</span><br><span class="line">     4: return &#x2F;&#x2F;返回void</span><br></pre></td></tr></table></figure>
-
-<h4 id="从字节码看自增"><a href="#从字节码看自增" class="headerlink" title="从字节码看自增"></a>从字节码看自增</h4><p>java方法源码如下:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">testIAdd</span><span class="params">()</span></span>&#123;</span><br><span class="line">      <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">      i = ++i + i++ + i++ + i++;</span><br><span class="line">      System.out.println(<span class="string">"i="</span> + i);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
-<p>通过javap -c查看编译后的结果</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"> 0 iconst_0      &#x2F;&#x2F;将int型0推送到栈顶</span><br><span class="line"> 1 istore_0      &#x2F;&#x2F;将栈顶int型数值存储到第一个本地变量中</span><br><span class="line"> 2 iinc 0 by 1   &#x2F;&#x2F;自增，第一个本地变量的i为1</span><br><span class="line"> 5 iload_0       &#x2F;&#x2F;将第一个int型本地变量i&#x3D;1加载到栈顶</span><br><span class="line"> 6 iload_0       &#x2F;&#x2F;将第一个int型本地变量i&#x3D;1加载到栈顶</span><br><span class="line"> 7 iinc 0 by 1   &#x2F;&#x2F;自增，第一个本地变量的i为2</span><br><span class="line">10 iadd          &#x2F;&#x2F;将栈顶两个int型数值相加并将结果压入栈顶，栈顶为2</span><br><span class="line">11 iload_0       &#x2F;&#x2F;将第一个int型本地变量i&#x3D;2加载到栈顶</span><br><span class="line">12 iinc 0 by 1   &#x2F;&#x2F;自增，第一个本地变量的i为3</span><br><span class="line">15 iadd          &#x2F;&#x2F;将栈顶两个int型数值相加并将结果压入栈顶，栈顶为4</span><br><span class="line">16 iload_0       &#x2F;&#x2F;将第一个int型本地变量i&#x3D;3加载到栈顶</span><br><span class="line">17 iinc 0 by 1   &#x2F;&#x2F;自增，第一个本地变量的i为4</span><br><span class="line">20 iadd					 &#x2F;&#x2F;将栈顶两个int型数值相加并将结果压入栈顶，栈顶为7</span><br><span class="line">21 istore_0      &#x2F;&#x2F;将栈顶int型数值7存入到第一个本地变量</span><br><span class="line">22 getstatic #2 &lt;java&#x2F;lang&#x2F;System.out&gt;</span><br><span class="line">25 new #3 &lt;java&#x2F;lang&#x2F;StringBuilder&gt;</span><br><span class="line">28 dup</span><br><span class="line">29 invokespecial #4 &lt;java&#x2F;lang&#x2F;StringBuilder.&lt;init&gt;&gt;</span><br><span class="line">32 ldc #5 &lt;i&#x3D;&gt;</span><br><span class="line">34 invokevirtual #6 &lt;java&#x2F;lang&#x2F;StringBuilder.append&gt;</span><br><span class="line">37 iload_0        &#x2F;&#x2F;将第一个int型本地变量i&#x3D;7加载到栈顶</span><br><span class="line">38 invokevirtual #7 &lt;java&#x2F;lang&#x2F;StringBuilder.append&gt;</span><br><span class="line">41 invokevirtual #8 &lt;java&#x2F;lang&#x2F;StringBuilder.toString&gt;</span><br><span class="line">44 invokevirtual #9 &lt;java&#x2F;io&#x2F;PrintStream.println&gt;</span><br><span class="line">47 return</span><br></pre></td></tr></table></figure>
-
-<p>基于栈的解释执行来进行动图演示如下：</p>
-<img src="/Users/kerry/Desktop/jvm相关/2019-11-25 11-58-12.2019-11-25 12_01_29.gif" alt="2019-11-25 11-58-12.2019-11-25 12_01_29" style="zoom:70%;" />
-
-<h4 id="从字节码看switch"><a href="#从字节码看switch" class="headerlink" title="从字节码看switch"></a>从字节码看switch</h4><blockquote>
-<p>编译器会使用tableswitch和lookupswitch指令来生成switch语句的编译代码。tableswitch指令用于表示switch结构中的case语句块，它可以高效的从索引表中确定case语句块的分支偏移量。当switch语句中的条件值不能对应于索引表中任何一个case语句块的分支偏移量，default分支将起作用。</p>
-</blockquote>
-<p>java方法源码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">chooseNear</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">switch</span> (i) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>通过javap -verbose查看编译后的结果</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">0: iload_1                           &#x2F;&#x2F;从局部变量表加载第一个本地变量到栈上</span><br><span class="line">  1: tableswitch   &#123; &#x2F;&#x2F; 0 to 2         &#x2F;&#x2F;根据索引值在跳转表中寻找配对的分支进行跳转（索引范围0-2）</span><br><span class="line">                0: 28									&#x2F;&#x2F;是0则跳到28</span><br><span class="line">                1: 30                  &#x2F;&#x2F;是1则跳到30</span><br><span class="line">                2: 32                  &#x2F;&#x2F;是2则跳到32</span><br><span class="line">          default: 34                  &#x2F;&#x2F;其他情况跳到34</span><br><span class="line">     &#125;</span><br><span class="line"> 28: iconst_0                          &#x2F;&#x2F;将0入栈到操作数栈上</span><br><span class="line"> 29: ireturn														&#x2F;&#x2F;将栈顶元素出栈并返回</span><br><span class="line"> 30: iconst_1													&#x2F;&#x2F;将1入栈到操作数栈上</span><br><span class="line"> 31: ireturn														&#x2F;&#x2F;将栈顶元素出栈并返回</span><br><span class="line"> 32: iconst_2													&#x2F;&#x2F;将2入栈到操作数栈上</span><br><span class="line"> 33: ireturn														&#x2F;&#x2F;将栈顶元素出栈并返回</span><br><span class="line"> 34: iconst_m1													&#x2F;&#x2F;将-1入栈到操作数栈上</span><br><span class="line"> 35: ireturn														&#x2F;&#x2F;将栈顶元素出栈并返回</span><br></pre></td></tr></table></figure>
-
-<h6 id="tableswitch"><a href="#tableswitch" class="headerlink" title="tableswitch"></a>tableswitch</h6><p>看下这个例子</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">chooseNear</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">switch</span> (i) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">4</span>:  <span class="comment">//这边变成了4</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这时候再看字节码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"> 1: tableswitch   &#123; &#x2F;&#x2F; 0 to 4     &#x2F;&#x2F;这边多了2和3的索引</span><br><span class="line">               0: 36</span><br><span class="line">               1: 38</span><br><span class="line">               2: 42      </span><br><span class="line">               3: 42</span><br><span class="line">               4: 40</span><br><span class="line">         default: 42</span><br><span class="line">    &#125;</span><br><span class="line">36: iconst_0</span><br><span class="line">37: ireturn</span><br><span class="line">38: iconst_1</span><br><span class="line">39: ireturn</span><br><span class="line">40: iconst_2</span><br><span class="line">41: ireturn</span><br><span class="line">42: iconst_m1</span><br><span class="line">43: ireturn</span><br></pre></td></tr></table></figure>
-
-<p>可以看到索引范围里面多了2和3，这是因为采用 tableswitch 来实现 switch-case，有断层的会<strong>生成一些虚假的 case 帮忙补齐连续</strong>，这样可以实现 O(1) 时间复杂度的查找</p>
-<h6 id="lookupswitch"><a href="#lookupswitch" class="headerlink" title="lookupswitch"></a>lookupswitch</h6><p>上面只是少量的断层情况，如果断层过大、过多会发生什么呢？</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">chooseNear</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">switch</span> (i) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">10</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">100</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>字节码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> 0: iload_1</span><br><span class="line"> 1: lookupswitch  &#123; &#x2F;&#x2F; 3</span><br><span class="line">               0: 36</span><br><span class="line">              10: 38</span><br><span class="line">             100: 40</span><br><span class="line">         default: 42</span><br><span class="line">    &#125;</span><br><span class="line">36: iconst_0</span><br><span class="line">37: ireturn</span><br><span class="line">38: iconst_1</span><br><span class="line">39: ireturn</span><br><span class="line">40: iconst_2</span><br><span class="line">41: ireturn</span><br><span class="line">42: iconst_m1</span><br><span class="line">43: ireturn</span><br></pre></td></tr></table></figure>
-
-<p>可以看到，字节码里面不再是tableswitch而是使用lookupswitch指令，如果依旧是使用tableswitch指令的话，虽然会提升索引查询速度，但是class文件大小会变得很大。lookupswitch指令之后的所有匹配键值对，都必须按照升序存储，便于更快的搜索(使用二分法等)</p>
-<p>java虚拟机的tableswitch和lookupswitch都只能支持int类型的条件值，如果是其他类型都会转成int类型，对于String和引用类型，则会使用其hashcode值当做条件值</p>
-<h4 id="从字节码看泛型"><a href="#从字节码看泛型" class="headerlink" title="从字节码看泛型"></a>从字节码看泛型</h4><p>我们知道java中泛型是通过擦除法实现的伪泛型，泛型信息在编译成字节码后的泛型信息会被擦除</p>
-<p>但是泛型在编译后完全被擦除么？</p>
-<p>java方法源码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testGeneric</span><span class="params">(List&lt;String&gt; list)</span></span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>通过javap -verbose查看编译后结果</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public void testGeneric(java.util.List&lt;java.lang.String&gt;);</span><br><span class="line">   descriptor: (Ljava&#x2F;util&#x2F;List;)V</span><br><span class="line">   flags: ACC_PUBLIC</span><br><span class="line">   Code:</span><br><span class="line">     stack&#x3D;0, locals&#x3D;2, args_size&#x3D;2</span><br><span class="line">        0: return</span><br><span class="line">     LineNumberTable:</span><br><span class="line">       line 21: 0</span><br><span class="line">     LocalVariableTable:</span><br><span class="line">       Start  Length  Slot  Name   Signature</span><br><span class="line">           0       1     0  this   Lcom&#x2F;kerry&#x2F;springstudy&#x2F;jvmtemp&#x2F;SynchronizedTest;</span><br><span class="line">           0       1     1  list   Ljava&#x2F;util&#x2F;List;</span><br><span class="line">     LocalVariableTypeTable:</span><br><span class="line">       Start  Length  Slot  Name   Signature</span><br><span class="line">           0       1     1  list   Ljava&#x2F;util&#x2F;List&lt;Ljava&#x2F;lang&#x2F;String;&gt;;</span><br><span class="line">   Signature: #22                          &#x2F;&#x2F; (Ljava&#x2F;util&#x2F;List&lt;Ljava&#x2F;lang&#x2F;String;&gt;;)V</span><br></pre></td></tr></table></figure>
-
-<p>可以看到在编译后的字节码文件中，方法表的Signature属性记录了泛型的信息，这样就可以通过java的反射api来获取泛型类型，如：<code>class.getGenericSuperclass()</code></p>
-<h4 id="从字节码看synchronized"><a href="#从字节码看synchronized" class="headerlink" title="从字节码看synchronized"></a>从字节码看synchronized</h4><h6 id="代码块级"><a href="#代码块级" class="headerlink" title="代码块级"></a>代码块级</h6><p>java方法源码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testMethod</span><span class="params">()</span></span>&#123;</span><br><span class="line">       <span class="keyword">synchronized</span> (SynchronizedTest<span class="class">.<span class="keyword">class</span>)</span>&#123;</span><br><span class="line">           System.out.println(<span class="string">"test"</span>);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-
-<p>通过javap -c查看编译后结果</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"> 0: ldc           #2 &#x2F;&#x2F;将常量池中#2符号引用压入栈顶 class com&#x2F;kerry&#x2F;springstudy&#x2F;jvmtemp&#x2F;SynchronizedTest</span><br><span class="line"> 2: dup							 &#x2F;&#x2F;复制栈顶的值插入栈顶</span><br><span class="line"> 3: astore_1				 &#x2F;&#x2F;将栈顶reference类型数据出栈并保存到第一个本地变量中</span><br><span class="line"> 4: monitorenter     &#x2F;&#x2F;栈顶元素出栈，并进入出栈对象的monitor</span><br><span class="line"> 5: getstatic     #3                  &#x2F;&#x2F; Field java&#x2F;lang&#x2F;System.out:Ljava&#x2F;io&#x2F;PrintStream;</span><br><span class="line"> 8: ldc           #4                  &#x2F;&#x2F; String test</span><br><span class="line">10: invokevirtual #5                  &#x2F;&#x2F; Method java&#x2F;io&#x2F;PrintStream.println:(Ljava&#x2F;lang&#x2F;String;)V</span><br><span class="line">13: aload_1          &#x2F;&#x2F;从局部变量表中加载第一个本地变量到栈中</span><br><span class="line">14: monitorexit      &#x2F;&#x2F;栈顶元素出栈，并退出出栈对象的monitor</span><br><span class="line">15: goto          23 &#x2F;&#x2F;方法正常结束，跳转到23返回</span><br><span class="line">18: astore_2         &#x2F;&#x2F;从这步开始是异常路径，将栈顶reference类型数据(异常对象)出栈并保存到第二个本地变量中</span><br><span class="line">19: aload_1					 &#x2F;&#x2F;从局部变量表中加载第一个本地变量到栈中</span><br><span class="line">20: monitorexit      &#x2F;&#x2F;栈顶元素出栈，并退出出栈对象的monitor</span><br><span class="line">21: aload_2          &#x2F;&#x2F;从局部变量表中加载第二个本地变量(异常对象)到栈中</span><br><span class="line">22: athrow           &#x2F;&#x2F;将异常对象重新抛出给方法的调用者</span><br><span class="line">23: return					 &#x2F;&#x2F;方法正常返回</span><br></pre></td></tr></table></figure>
-
-<p>代码块级别的同步是通过monitorenter和monitorexit两个指令实现的，两个指令的相关介绍如下：</p>
-<p>代码块级别的同步是通过monitorenter和monitorexit两个指令实现的，两个指令的相关介绍如下：</p>
-<p>monitorenter</p>
-<blockquote>
-<p>任何对象都有一个monitor与之关联。当且仅当一个monitor被持有后，它才会处于锁定状态。线程执行到monitorenter指令时，将会按下列方式尝试获取objectref所对应的monitor的所有权：</p>
-<ul>
-<li>如果objectref的monitor进入计数器为0，那么线程可以成功进入monitor，以及将计数器值设置为1。当前线程就是monitor的所有者</li>
-<li>如果当前线程已经拥有了objectref的monitor，那么它可以重入这个monitor，重入时需将进入计数器的值加1</li>
-<li>如果其他线程已经拥有objectref的monitor的所有权，那么当前线程将被阻塞，知道monitor的进入计数器值变为0时，才能重新尝试获取monitor的所有权</li>
-</ul>
-</blockquote>
-<p>monitorexit</p>
-<blockquote>
-<p>执行monitorexit指令的线程必须是与objectref所引用的实例相对应的monitor的所有者</p>
-<p>指令执行时，线程把monitor的进入计数器值减1，如果减1后计数器值为0，那么线程退出monitor，不再是这个monitor的拥有者。其他被这个monitor阻塞的线程可以尝试获取这个monitor的所有权</p>
-<p>当objectref为null时，monitorexit指令将抛出NullPointerException异常</p>
-<p>否则，如果执行monitorexit的线程原本并没有这个monitor的所有权，那么monitorexit指令将抛出IllegalMonitorStateException异常</p>
-</blockquote>
-<p>可以看到上述指令中存在两个monitorexit指令，原因是编译器必须确保无论同步代码块中的代码是以何种方式结束（正常返回或者异常退出），代码中调用过的每一个monitorenter必须执行其对应的monitorexit。为了保证这一点，编译器会自动生成一个异常处理器，这个异常处理器的目的就是为了同步代码块抛出异常时能执行 monitorexit。</p>
-<h6 id="方法级"><a href="#方法级" class="headerlink" title="方法级"></a>方法级</h6><p>java方法源码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">testMethod</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      System.out.println(<span class="string">"test"</span>);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
-<p>通过javap -verbose 查看编译后的结果</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public synchronized void testMethod();</span><br><span class="line">  descriptor: ()V</span><br><span class="line">  flags: ACC_PUBLIC, ACC_SYNCHRONIZED</span><br><span class="line">  Code:</span><br><span class="line">    stack&#x3D;2, locals&#x3D;1, args_size&#x3D;1</span><br><span class="line">       0: getstatic     #2                  &#x2F;&#x2F; Field java&#x2F;lang&#x2F;System.out:Ljava&#x2F;io&#x2F;PrintStream;</span><br><span class="line">       3: ldc           #3                  &#x2F;&#x2F; String test</span><br><span class="line">       5: invokevirtual #4                  &#x2F;&#x2F; Method java&#x2F;io&#x2F;PrintStream.println:(Ljava&#x2F;lang&#x2F;String;)V</span><br><span class="line">       8: return</span><br><span class="line">    LineNumberTable:</span><br><span class="line">      line 14: 0</span><br><span class="line">      line 16: 8</span><br><span class="line">    LocalVariableTable:</span><br><span class="line">      Start  Length  Slot  Name   Signature</span><br><span class="line">          0       9     0  this   Lcom&#x2F;kerry&#x2F;springstudy&#x2F;jvmtemp&#x2F;SynchronizedTest;</span><br></pre></td></tr></table></figure>
-
-<p>可以看到flags标志里面有个ACC_SYNCHRONIZED标记，标记介绍如下：</p>
-<blockquote>
-<p>方法级别的同步是隐式的，作为方法调用的一部分。同步方法的常量池中会有一个ACC_SYNCHRONIZED标志。</p>
-<p>当调用一个设置了ACC_SYNCHRONIZED标志的方法，执行线程需要先获得monitor锁，然后开始执行方法，方法执行之后再释放monitor锁，当方法不管是正常return还是抛出异常都会释放对应的monitor锁。</p>
-<p>在这期间，如果其他线程来请求执行方法，会因为无法获得监视器锁而被阻断住。如果在方法执行过程中，发生了异常，并且方法内部并没有处理该异常，那么在异常被抛到方法外面之前监视器锁会被自动释放。</p>
-</blockquote>
-<p>方法级的synchronized是通过ACC_SYNCHRONIZED来实现方法同步的</p>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>个人觉得可以适当了解下class文件的结构和一些常用指令的用法，这样可以在遇到一些从源代码角度难以理解的代码的执行、输出以及一些代码语法糖时，可以从底层的角度分析理解。同时也可以帮助我们在写代码的时候可以从底层出发思考不同的写法之间会产生什么样的差别，从而选择最佳写法。</p>
-<h4 id="手动操作字节码"><a href="#手动操作字节码" class="headerlink" title="手动操作字节码"></a>手动操作字节码</h4><p>主要的几种工具是</p>
-<p>ASM：可以直接生产 .class字节码文件，通过ClassReader读取类文件，通过ClassWriter重新构建编译后的类，如修改类名、属性以及方法，也可以生成新的类的字节码文件。</p>
-<p>Javassist：强调源代码层次操作字节码的框架Javassist。</p>
-<h4 id="实际应用，弄一个插件实现不重启动态调试"><a href="#实际应用，弄一个插件实现不重启动态调试" class="headerlink" title="实际应用，弄一个插件实现不重启动态调试"></a>实际应用，弄一个插件实现不重启动态调试</h4>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/19/jvm%E5%AD%97%E8%8A%82%E7%A0%81/" data-id="ckaox2law0007zsgf85em9vy4" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-</section>
         
-          <aside id="sidebar">
-  
+        
+        <a class="flink" href="/2019/12/16/%E5%9B%BE%E8%A7%A3http/">
+            <div class="list">
+                <div class="postname">
+                    图解http
+                </div>
+                <div class="posttime">
+                    December 16th
+                </div>
+            </div>
+        </a>
     
-
-  
+        
+        
+        <a class="flink" href="/2019/12/11/%E9%87%91%E5%AD%97%E5%A1%94%E5%8E%9F%E7%90%86/">
+            <div class="list">
+                <div class="postname">
+                    金字塔原理
+                </div>
+                <div class="posttime">
+                    December 11th
+                </div>
+            </div>
+        </a>
     
-
-  
+        
+        
+        <a class="flink" href="/2019/12/05/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E5%AD%98%E6%B3%84%E9%9C%B2/">
+            <div class="list">
+                <div class="postname">
+                    浏览器内存泄露
+                </div>
+                <div class="posttime">
+                    December 5th
+                </div>
+            </div>
+        </a>
     
-  
+        
+        
+        <a class="flink" href="/2019/12/03/hello-world/">
+            <div class="list">
+                <div class="postname">
+                    Hello World
+                </div>
+                <div class="posttime">
+                    December 3rd
+                </div>
+            </div>
+        </a>
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
-    </div>
-  </div>
-
-
-  
+        
+        
+        <a class="flink" href="/2019/11/19/jvm%E5%AD%97%E8%8A%82%E7%A0%81/">
+            <div class="list">
+                <div class="postname">
+                    jvm字节码
+                </div>
+                <div class="posttime">
+                    November 19th
+                </div>
+            </div>
+        </a>
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/01/04/mysql%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/">mysql必知必会</a>
-          </li>
-        
-          <li>
-            <a href="/2019/12/30/vimStudy/">vimStudy</a>
-          </li>
-        
-          <li>
-            <a href="/2019/12/29/%E5%B0%8F%E5%BC%BA%E5%8D%87%E8%81%8C%E8%AE%B0/">小强升职记</a>
-          </li>
-        
-          <li>
-            <a href="/2019/12/16/%E5%9B%BE%E8%A7%A3http/">图解http</a>
-          </li>
-        
-          <li>
-            <a href="/2019/12/11/%E9%87%91%E5%AD%97%E5%A1%94%E5%8E%9F%E7%90%86/">金字塔原理</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+</div>
+    <div class="footer" id="footer">
+    <p>Copyright © 2020 <a class="flink" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>-<a class="flink" href="https://github.com/sanjinhub/hexo-theme-geek" target="_blank" rel="noopener">Geek</a>.
+        <label class="el-switch el-switch-green el-switch-sm" style="vertical-align: sub;">
+            <input type="checkbox" name="switch" id="update_style">
+            <span class="el-switch-style"></span>
+        </label>
+<!--         <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+        document.write(unescape("%3Cspan id='cnzz_stat_icon_1278548644'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/stat.php%3Fid%3D1278548644%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+        </script> -->
+    </p>
+</div>
+<input type="hidden" id="web_style" value="black">
+<input type="hidden" id="valine_appid" value="CmCti21ooOOIzFOhEyFkFvR0-gzGzoHsz">
+<input type="hidden" id="valine_appKey" value="FqiyUqbg7McKN2eG0MCewupf">
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/libs/jquery.min.js"></script>
 
 
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+<script src="/libs/highlight/highlight.pack.js"></script>
 
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script src='//cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
 
+<script src="/js/js.js"></script>
 
+<style type="text/css">
+.v * {
+    color: #698fca;
+}
 
+.v .vlist .vcard .vhead .vsys {
+    color: #3a3e4a;
+}
 
-<script src="/js/script.js"></script>
+.v .vlist .vcard .vh .vmeta .vat {
+    color: #638fd5;
+}
 
+.v .vlist .vcard .vhead .vnick {
+    color: #6ba1ff;
+}
 
+.v a {
+    color: #8696b1;
+}
 
-
-  </div>
+.v .vlist .vcard .vhead .vnick:hover {
+    color: #669bfc;
+}
+</style>
 </body>
+
 </html>
