@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gellert — 个人作品集">
+  <title>Gellert · Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">G</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section id="hero" class="section">
+      <div class="container">
+        <p class="hero-greeting">Hi，我是</p>
+        <h1 class="hero-name">Gellert</h1>
+        <p class="hero-tagline">
+          构建优雅的<span class="accent">数字体验</span>
+        </p>
+        <p class="hero-bio">
+          一名热爱设计与代码的开发者，专注打造简洁、高效、有温度的互联网产品。
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">查看作品</a>
+          <a href="#contact" class="btn btn-ghost">联系我</a>
+        </div>
+      </div>
+      <div class="hero-bg-grid"></div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-number">01</span>
+          About
+        </h2>
+        <div class="about-content">
+          <p>我专注于前端开发与交互设计，喜欢将复杂问题简单化。相信好的产品应该是克制而有力的——在细节处展现品质，在无声中传递价值。</p>
+          <p>目前在探索 Web 技术、AI 应用与开源社区的交叉点，追求代码之美与产品之用的平衡。</p>
+          <ul class="about-highlights">
+            <li><span class="label">定位</span><span>全栈开发者 / UI 设计爱好者</span></li>
+            <li><span class="label">城市</span><span>中国 · 深圳</span></li>
+            <li><span class="label">兴趣</span><span>开源、AI、摄影、咖啡</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-number">02</span>
+          Projects
+        </h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-icon">🚀</div>
+            <h3>Project Alpha</h3>
+            <p>一个高性能的 Web 应用，使用 React + Node.js 构建，支持实时协作与离线访问。</p>
+            <div class="project-tags">
+              <span>React</span><span>Node.js</span><span>WebSocket</span>
+            </div>
+            <a href="#" class="project-link">了解更多 →</a>
+          </article>
+          <article class="project-card">
+            <div class="project-icon">🧠</div>
+            <h3>AI Toolkit</h3>
+            <p>集成主流 LLM API 的开发工具包，提供统一接口与流式响应处理能力。</p>
+            <div class="project-tags">
+              <span>Python</span><span>LLM</span><span>API</span>
+            </div>
+            <a href="#" class="project-link">了解更多 →</a>
+          </article>
+          <article class="project-card">
+            <div class="project-icon">🎨</div>
+            <h3>Design System</h3>
+            <p>一套面向 SaaS 产品的组件库，支持主题定制与无障碍访问标准。</p>
+            <div class="project-tags">
+              <span>Vue</span><span>Storybook</span><span>Design Tokens</span>
+            </div>
+            <a href="#" class="project-link">了解更多 →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-number">03</span>
+          Skills
+        </h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Languages</h3>
+            <ul class="skill-list">
+              <li>TypeScript <span class="skill-dot"></span></li>
+              <li>Python <span class="skill-dot"></span></li>
+              <li>Go <span class="skill-dot dim"></span></li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Frontend</h3>
+            <ul class="skill-list">
+              <li>React / Next.js <span class="skill-dot"></span></li>
+              <li>Vue / Nuxt <span class="skill-dot"></span></li>
+              <li>Tailwind CSS <span class="skill-dot"></span></li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Backend</h3>
+            <ul class="skill-list">
+              <li>Node.js <span class="skill-dot"></span></li>
+              <li>PostgreSQL <span class="skill-dot dim"></span></li>
+              <li>Redis <span class="skill-dot dim"></span></li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Tools</h3>
+            <ul class="skill-list">
+              <li>Docker <span class="skill-dot"></span></li>
+              <li>Git / GitHub <span class="skill-dot"></span></li>
+              <li>Figma <span class="skill-dot dim"></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="section-number">04</span>
+          Contact
+        </h2>
+        <div class="contact-content">
+          <p class="contact-intro">有想法或合作机会？欢迎随时联系。</p>
+          <div class="contact-links">
+            <a href="mailto:gellert@example.com" class="contact-item">
+              <span class="contact-icon">✉</span>
+              <span>gellert@example.com</span>
+            </a>
+            <a href="https://github.com/GellertGG" target="_blank" rel="noopener" class="contact-item">
+              <span class="contact-icon">⌘</span>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Gellert. Built with care.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
