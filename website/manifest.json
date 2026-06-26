@@ -2,9 +2,17 @@
   {
     "id": "ai-weekly-2026w26",
     "title": "AI 趋势周报 · 2026 W26",
-    "description": "本周 AI 领域热点速览：GPT-5 Preview、Llama 4 开源、AI 编程助手竞争、多模态新范式。",
+    "description": "生成时间：2026-06-26 · 来源：AI 自动聚合 本周热点 模型发布 OpenAI 发布 GPT-5 Preview 推理能力大幅提升，支持更长上下文窗口，多项基准测试刷新 SOTA。",
     "path": "pages/ai-weekly-2026w26.html",
-    "date": "2026-06-26",
+    "date": "2026-06-25",
+    "preview": true
+  },
+  {
+    "id": "anhui-preti-batch-2025",
+    "title": "2025年安徽省本科提前批招生院校汇总",
+    "description": "安徽公安学院2025年本科提前批招生计划、录取分数线、选科要求等完整数据",
+    "path": "pages/anhui-preti-batch-2025.html",
+    "date": "2025-01-01",
     "preview": true
   }
 ]
