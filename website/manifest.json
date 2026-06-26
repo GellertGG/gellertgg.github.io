@@ -1,5 +1,13 @@
 [
   {
+    "id": "test-deploy-page",
+    "title": "测试部署页面",
+    "description": "这是一个用于测试一键部署功能的示例页面。",
+    "path": "pages/test-deploy-page.html",
+    "date": "2026-06-26",
+    "preview": true
+  },
+  {
     "id": "ai-weekly-2026w26",
     "title": "AI 趋势周报 · 2026 W26",
     "description": "生成时间：2026-06-26 · 来源：AI 自动聚合 本周热点 模型发布 OpenAI 发布 GPT-5 Preview 推理能力大幅提升，支持更长上下文窗口，多项基准测试刷新 SOTA。",
