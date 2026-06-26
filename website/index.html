@@ -15,8 +15,7 @@
       <a href="#hero" class="nav-logo">G</a>
       <div class="nav-links">
         <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
+        <a href="#pages">Pages</a>
         <a href="#contact">Contact</a>
       </div>
       <button class="nav-toggle" aria-label="Toggle menu">
@@ -37,10 +36,10 @@
           构建优雅的<span class="accent">数字体验</span>
         </p>
         <p class="hero-bio">
-          一名热爱设计与代码的开发者，专注打造简洁、高效、有温度的互联网产品。
+          热爱设计与代码，专注打造简洁、高效、有温度的互联网产品。这里陈列我与 AI 协作生成的每一个页面，一键部署，随时分享。
         </p>
         <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">查看作品</a>
+          <a href="#pages" class="btn btn-primary">浏览页面</a>
           <a href="#contact" class="btn btn-ghost">联系我</a>
         </div>
       </div>
@@ -66,85 +65,41 @@
       </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section">
+    <!-- Pages Gallery -->
+    <section id="pages" class="section">
       <div class="container">
         <h2 class="section-title">
           <span class="section-number">02</span>
-          Projects
+          静态页面展示
         </h2>
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-icon">🚀</div>
-            <h3>Project Alpha</h3>
-            <p>一个高性能的 Web 应用，使用 React + Node.js 构建，支持实时协作与离线访问。</p>
-            <div class="project-tags">
-              <span>React</span><span>Node.js</span><span>WebSocket</span>
-            </div>
-            <a href="#" class="project-link">了解更多 →</a>
-          </article>
-          <article class="project-card">
-            <div class="project-icon">🧠</div>
-            <h3>AI Toolkit</h3>
-            <p>集成主流 LLM API 的开发工具包，提供统一接口与流式响应处理能力。</p>
-            <div class="project-tags">
-              <span>Python</span><span>LLM</span><span>API</span>
-            </div>
-            <a href="#" class="project-link">了解更多 →</a>
-          </article>
-          <article class="project-card">
-            <div class="project-icon">🎨</div>
-            <h3>Design System</h3>
-            <p>一套面向 SaaS 产品的组件库，支持主题定制与无障碍访问标准。</p>
-            <div class="project-tags">
-              <span>Vue</span><span>Storybook</span><span>Design Tokens</span>
-            </div>
-            <a href="#" class="project-link">了解更多 →</a>
-          </article>
-        </div>
-      </div>
-    </section>
+        <p class="section-desc">
+          以下页面由 AI 根据我的需求自动生成，部署后即可通过链接独立访问与分享。
+        </p>
 
-    <!-- Skills -->
-    <section id="skills" class="section">
-      <div class="container">
-        <h2 class="section-title">
-          <span class="section-number">03</span>
-          Skills
-        </h2>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3>Languages</h3>
-            <ul class="skill-list">
-              <li>TypeScript <span class="skill-dot"></span></li>
-              <li>Python <span class="skill-dot"></span></li>
-              <li>Go <span class="skill-dot dim"></span></li>
-            </ul>
+        <!-- Sort controls -->
+        <div class="pages-toolbar">
+          <div class="sort-group">
+            <span class="sort-label">排序</span>
+            <button class="sort-btn active" data-sort="date-desc">最新</button>
+            <button class="sort-btn" data-sort="date-asc">最早</button>
+            <button class="sort-btn" data-sort="title">名称</button>
           </div>
-          <div class="skill-category">
-            <h3>Frontend</h3>
-            <ul class="skill-list">
-              <li>React / Next.js <span class="skill-dot"></span></li>
-              <li>Vue / Nuxt <span class="skill-dot"></span></li>
-              <li>Tailwind CSS <span class="skill-dot"></span></li>
-            </ul>
+          <span class="pages-count" id="pagesCount"></span>
+        </div>
+
+        <!-- Cards rendered by JS -->
+        <div class="pages-grid" id="pagesGrid">
+          <!-- Loading skeleton -->
+          <div class="pages-loading">
+            <span>加载中…</span>
           </div>
-          <div class="skill-category">
-            <h3>Backend</h3>
-            <ul class="skill-list">
-              <li>Node.js <span class="skill-dot"></span></li>
-              <li>PostgreSQL <span class="skill-dot dim"></span></li>
-              <li>Redis <span class="skill-dot dim"></span></li>
-            </ul>
-          </div>
-          <div class="skill-category">
-            <h3>Tools</h3>
-            <ul class="skill-list">
-              <li>Docker <span class="skill-dot"></span></li>
-              <li>Git / GitHub <span class="skill-dot"></span></li>
-              <li>Figma <span class="skill-dot dim"></span></li>
-            </ul>
-          </div>
+        </div>
+
+        <!-- Empty state -->
+        <div class="pages-empty" id="pagesEmpty" style="display:none">
+          <div class="empty-icon">📄</div>
+          <p>暂无页面</p>
+          <span>与 AI 协作生成的页面将出现在这里</span>
         </div>
       </div>
     </section>
@@ -153,7 +108,7 @@
     <section id="contact" class="section">
       <div class="container">
         <h2 class="section-title">
-          <span class="section-number">04</span>
+          <span class="section-number">03</span>
           Contact
         </h2>
         <div class="contact-content">
