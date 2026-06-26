@@ -8,6 +8,14 @@
     "preview": true
   },
   {
+    "id": "立讯精密投资价值诊断报告",
+    "title": "立讯精密 (002475) 投资价值深度诊断报告",
+    "description": "诊断日期：2026年6月23日 ｜ 消费电子精密制造龙头 ｜ 总市值约 5,100 亿元 77 综合评分 / 100 85 基本面 65 技术面 70 资金面 80 事件催化 85 同业对标 数据来源：富途牛牛、东方财富、证券之星、同花顺、...",
+    "path": "pages/立讯精密投资价值诊断报告.html",
+    "date": "2026-06-26",
+    "preview": true
+  },
+  {
     "id": "ai-weekly-2026w26",
     "title": "AI 趋势周报 · 2026 W26",
     "description": "生成时间：2026-06-26 · 来源：AI 自动聚合 本周热点 模型发布 OpenAI 发布 GPT-5 Preview 推理能力大幅提升，支持更长上下文窗口，多项基准测试刷新 SOTA。",
@@ -28,6 +36,14 @@
     "title": "2025年安徽省本科提前批招生院校汇总",
     "description": "安徽公安学院2025年本科提前批招生计划、录取分数线、选科要求等完整数据",
     "path": "pages/anhui-preti-batch-2025.html",
+    "date": "2025-01-01",
+    "preview": true
+  },
+  {
+    "id": "jiangning-gaokao-2025",
+    "title": "2025年南京市江宁区高中高考情况汇总",
+    "description": "2025年南京市江宁区高中高考情况汇总",
+    "path": "pages/jiangning-gaokao-2025.html",
     "date": "2025-01-01",
     "preview": true
   }
